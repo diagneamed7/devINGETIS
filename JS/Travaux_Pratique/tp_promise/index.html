@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suivi de Livraison</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .progress-container {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .progress-bar {
+            width: 0;
+            height: 30px;
+            background-color: #4caf50;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" name="text" id="text">
+    <input type="button" value="submit" id="btn">
+    <h2>Suivi de Livraison</h2>
+    <div id="progress-container" class="progress-container">
+        <div id="progress-bar" class="progress-bar">0%</div>
+    </div>
+
+    <script src="tpPRomise.js"></script>
+</body>
+</html>
