@@ -30,7 +30,7 @@ class Moto extends Vehicule {
 }
 // Utilisation
 const vehiculeGenerique = new Vehicule('Véhicule générique', 120); 
-const voiture = new Voiture('Voiture de sport', 200);
+const voiture = new Voiture('Voiture de sportTTTTTTTT', 200);
 const moto = new Moto('Moto de course', 220);
 const vehicules = [vehiculeGenerique, voiture, moto];
 // Affichage des informations et démarrage pour chaque véhicule 
