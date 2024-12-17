@@ -4,7 +4,9 @@ const CategoryDTO = require('../dtos/CategoryDTO');
 class CategoryService {
     async createCategory(name) {
         const category = await CategoryRepository.createCategory({ name });
-        return new CategoryDTO(category.id, category.name);
+        return new CategoryDTO(
+            category.id, 
+            category.name);
     }
 
     async getAllCategories() {

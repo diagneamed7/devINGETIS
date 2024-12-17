@@ -1,6 +1,6 @@
 const { where } = require("sequelize");
 const Product = require("../entities/Product");
-const { updateProduct } = require("../services/ProductService");
+//const { updateProduct } = require("../services/ProductService");
 
 class ProductRepository {
   async createProduct(data) {
@@ -29,10 +29,6 @@ class ProductRepository {
     return await product.destroy();
   }
 
-
-  async editProduct(){
-    
-  }
 }
 
 module.exports = new ProductRepository();

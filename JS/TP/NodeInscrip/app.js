@@ -17,13 +17,13 @@ app.use(helmet());
 app.use(cookieParser());
 app.use(csrf({ cookie: true })); // Protection CSRF
 // Middleware global pour injecter le token CSRF dans les vues
-app.use((req, res, next) => {
+     app.use((req, res, next) => {
     res.locals.csrfToken = req.csrfToken(); // Ajoute csrfToken à res.locals
-    next();
-});
+     next();
+ });
 app.use('/auth', authRoutes);
 // Lancer le serveur
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on port localhost:${PORT}`);
 });

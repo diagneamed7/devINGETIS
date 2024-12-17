@@ -1,4 +1,4 @@
-<!-- Formulaire d'inscription -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +10,9 @@
     <h1>Register</h1>
     <form action="/auth/register" method="POST">
         <!-- Si vous utilisez CSRF, ajoutez le token -->
-        <% if (csrfToken) { %>
+         <% if (csrfToken) { %> 
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-        <% } %>
+        <% } %> 
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
         <br>

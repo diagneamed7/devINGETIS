@@ -15,7 +15,9 @@ app.use(methodOverride('_method'));
 app.use('/products', productRoutes);
 app.use('/categories', categoryRoutes);
 
-
+app.get('/', (req, res) =>{
+    res.redirect('/products')
+})
 
 
 
