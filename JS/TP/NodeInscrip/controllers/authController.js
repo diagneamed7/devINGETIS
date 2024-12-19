@@ -48,6 +48,7 @@ const login = async (req, res) => {
 
     res.cookie("jwt", token, { httpOnly: true });
     res.status(200).json({ message: "Login successful", token });
+    res.render('dashboard')
   } catch (err) {
     res.status(500).json({ error: "Internal Server Error" });
   }

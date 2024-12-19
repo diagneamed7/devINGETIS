@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TPCOMPTE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b36641ada857db89b62613c7cca3e04c8aefc7cc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f860ed12902479a341cefa30c12f4515d8ebd3e6")]
 [assembly: System.Reflection.AssemblyProductAttribute("TPCOMPTE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TPCOMPTE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -23,4 +23,23 @@ router.post('/categories',async (req, res) => {
     
 });
 
+//route pour afficher le formulaire pour modifier un produit
+router.get('/edit/:id',(req,res) =>{
+    const {id} = req.params;
+    const categorie = CategoryService.getCategoryByID(id); 
+    res.render('categories/newFormC',{categorie});
+} )
+
+//route pour modifier le produit 
+router.put('/categories/:id', async (req, res) =>{
+    const {id} = req.params;
+    const {name} = req.body;
+    try{
+        await CategoryService.createCategory(id, name);
+        res.redirect('/categories');
+    }catch(error){
+    res.status(400).json({ error: error.message });
+    }
+})
+
 module.exports = router;
