@@ -21,7 +21,8 @@ const register = async (req, res) => {
       email,
       password: hashedPassword,
   });
-    res.status(201).json({ message: "User registered", user: newUser });
+    res.redirect('/');
+    //res.status(201).json({ message: "User registered", user: newUser });
   } catch (err) {
     console.error("Error during user registration:", err); // Ajout d'un log détaillé
     res.status(500).json({ error: "Internal Server Error", details: err.message });
@@ -47,8 +48,9 @@ const login = async (req, res) => {
     );
 
     res.cookie("jwt", token, { httpOnly: true });
-    res.status(200).json({ message: "Login successful", token });
-    res.render('dashboard')
+        // Rediriger vers la page produit après connexion réussie
+        res.redirect('/products');
+   // res.status(200).json({ message: "Login successful", token });
   } catch (err) {
     res.status(500).json({ error: "Internal Server Error" });
   }

@@ -25,12 +25,12 @@ app.use(csrf({ cookie: true })); // Protection CSRF
 
 // Middleware global pour CSRF
 app.use((req, res, next) => {
-    res.locals.csrfToken = req.csrfToken(); // Ajout du token CSRF aux vues
+    res.locals.csrfToken = req.csrfToken(); // pour Ajouter du token CSRF aux vues
     next();
 });
-//Pour afficher l'acceuil des que le projet est lancé
+//Pour afficher la vue dés le lancement du projet 
 app.get('/', (req, res) => {
-    res.render('dashboard'); // Remplacez par "home" si votre fichier s'appelle home.ejs
+    res.render('Acceuil');
 });
 
 
