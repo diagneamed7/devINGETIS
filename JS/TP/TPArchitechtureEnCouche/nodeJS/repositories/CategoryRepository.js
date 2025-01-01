@@ -1,4 +1,4 @@
-const Category = require('../entities/Category');
+const Category = require("../entities/Category");
 
 class CategoryRepository {
     async createCategory(data) {
@@ -8,21 +8,21 @@ class CategoryRepository {
     async getAllCategories() {
         return await Category.findAll();
     }
-    async getCategoriesById(id){
+    async getCategoriesById(id) {
         return await Category.findByPk(id);
     }
 
-    async updateCategories(id, updateData){
-        return await Category.update(updateData, {where:{id}})
+    async updateCategories(id, updateData) {
+        return await Category.update(updateData, { where: { id } });
     }
 
-    async deleteCategories(id){
-        Category = this.getCategoriesById(id)
-        if (!Category){
-            throw new error('categorie introuvable');
-            }
+    async deleteCategories(id) {
+        const category = await this.getCategoriesById(id);
+        if (!category) {
+            throw new error("categorie introuvable");
+        }
 
-        return await Category.destroy();
+        return await category.destroy();
     }
 }
 

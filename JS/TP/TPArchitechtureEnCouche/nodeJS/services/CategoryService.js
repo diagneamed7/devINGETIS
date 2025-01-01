@@ -23,9 +23,23 @@ class CategoryService {
             category.name
         )
     }
+    async updateCategories(id, name){
+        console.log('Service updateCategories appelé avec :', { id, name }); // Debug
+        const category = await CategoryRepository.getCategoriesById(id);
+        if(!category){
+            throw new Error ('category pas trouvé');
+        }
+        const updateCategory = await CategoryRepository.updateCategories(id,{name});
+        console.log('Mise à jour réussie pour :', { id, name }); // Debug
+        return new CategoryDTO(
+            updateCategory.name
+        );
+    }
 
+
+    //supprimer un produit
     async deleteCategory(id){
-    const category = await CategoryRepository.getCategoriesByID(id);
+    const category = await CategoryRepository.getCategoriesById(id);
     if (!category) {
          throw new Error("Category not found");
        }

@@ -31,15 +31,26 @@ router.get('/edit/:id',(req,res) =>{
 } )
 
 //route pour modifier le produit 
-router.put('/categories/:id', async (req, res) =>{
+router.put('/:id', async (req, res) =>{
+    console.log('Route PUT /categories/:id appelée'); // Debug
     const {id} = req.params;
     const {name} = req.body;
+    console.log('Données reçues :', { id, name }); // Debug
     try{
-        await CategoryService.createCategory(id, name);
+        await CategoryService.updateCategories(id, name);
         res.redirect('/categories');
     }catch(error){
+        console.error('Erreur dans la route PUT:', error.message); // Debug
     res.status(400).json({ error: error.message });
     }
 })
-
+router.delete('/:id',async(req,res)=>{
+    const {id} = req.params;
+    try{
+        await CategoryService.deleteCategory(id);
+        res.redirect('/categories');
+    }catch(error){
+        res.status(400).json({ details: error.message})
+    }
+ })
 module.exports = router;
