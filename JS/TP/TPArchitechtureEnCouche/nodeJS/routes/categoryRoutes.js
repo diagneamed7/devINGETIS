@@ -24,9 +24,9 @@ router.post('/categories',async (req, res) => {
 });
 
 //route pour afficher le formulaire pour modifier un produit
-router.get('/edit/:id',(req,res) =>{
+router.get('/edit/:id', async (req,res) =>{
     const {id} = req.params;
-    const categorie = CategoryService.getCategoryByID(id); 
+    const categorie = await CategoryService.getCategoryByID(id); 
     res.render('categories/newFormC',{categorie});
 } )
 

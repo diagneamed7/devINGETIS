@@ -41,7 +41,7 @@ const User = require('./entities/User');
     await User.sync(); // Synchroniser le modèle avec la base de données
 
     // Vérifier si un admin existe déjà
-    const adminExists = await User.findOne({ where: { email: 'admin@gmail.com' } });
+    const adminExists = await User.findOne({ where: { email: 'admin@example.com' } });
     if (!adminExists) {
       // Créer un admin par défaut
       const hashedPassword = await bcrypt.hash('adminpassword', 10);

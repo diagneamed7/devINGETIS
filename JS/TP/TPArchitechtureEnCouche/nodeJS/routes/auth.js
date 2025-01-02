@@ -14,5 +14,10 @@ router.get('/login', (req, res) => {
 // Soumission des formulaires
 router.post('/register', register);
 router.post('/login', login);
+//deconnexion
+router.get(('/logout'), (req,res)=>{
+    req.session.destroy((err)=>{})
+}); 
+
 
 module.exports = router;

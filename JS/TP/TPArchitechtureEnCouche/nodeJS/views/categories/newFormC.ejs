@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Edit Product</title>
+  <title>Edit Categories</title>
 </head>
 <body>
-  <h1>Edit Product</h1>
-
+  <h1>Edit Categories</h1>
   <form action="/categories/<%= categorie.id %>?_method=PUT" method="POST">
-    <input type="text" name="name" value="<%= categorie.name %>" placeholder="category Name" required />
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>"> <!-- Token CSRF -->
+    <input type="text" name="name" value="<%= categorie.name %>" placeholder="Category Name" required />
     <button type="submit">Save Changes</button>
   </form>
   
