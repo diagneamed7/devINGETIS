@@ -21,6 +21,7 @@ const register = async (req, res) => {
       email,
       password: hashedPassword,
   });
+   
     res.redirect('/');
     //res.status(201).json({ message: "User registered", user: newUser });
   } catch (err) {

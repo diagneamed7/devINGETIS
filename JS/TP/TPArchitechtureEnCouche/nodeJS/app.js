@@ -32,8 +32,34 @@ app.use((req, res, next) => {
 app.get('/', (req, res) => {
     res.render('Acceuil');
 });
+//Pour fixer un admin de base 
+const bcrypt = require('bcrypt');
+const User = require('./entities/User');
+/*
+(async () => {
+  try {
+    await User.sync(); // Synchroniser le modèle avec la base de données
 
-
+    // Vérifier si un admin existe déjà
+    const adminExists = await User.findOne({ where: { email: 'admin@gmail.com' } });
+    if (!adminExists) {
+      // Créer un admin par défaut
+      const hashedPassword = await bcrypt.hash('adminpassword', 10);
+      await User.create({
+        username: 'admin',
+        email: 'admin@example.com',
+        password: hashedPassword,
+        role: 'admin',
+      });
+      console.log('Admin user created successfully');
+    } else {
+      console.log('Admin user already exists');
+    }
+  } catch (err) {
+    console.error('Error creating admin user:', err);
+  }
+})();
+*/
 // Routes
 app.use('/products', productRoutes);
 app.use('/categories', categoryRoutes);
