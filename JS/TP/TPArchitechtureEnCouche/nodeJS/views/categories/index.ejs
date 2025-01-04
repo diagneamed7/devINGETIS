@@ -52,6 +52,7 @@
                 method="POST"
                 style="display: inline"
               >
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                 <button
                   type="submit"
                   onclick="return confirm('Are you sure you want to delete this category?')"

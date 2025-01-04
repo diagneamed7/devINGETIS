@@ -4,11 +4,12 @@ const CategoryService = require("../services/CategoryService");
 
 const express = require("express");
 const ProductsController = require("../controllers/ProductsController");
+const { isAuthenticated, isAdmin } = require("../middlewares/authMiddleware");
 const router = express.Router();
 
 // Exemple de route pour afficher tous les produits
 // Route principale pour afficher les produits
-router.get("/", async (req, res) => {
+router.get("/",isAuthenticated, async (req, res) => {
   try {
     const products = await ProductService.getAllProducts();
     const categories = await CategoryService.getAllCategories();
@@ -20,7 +21,7 @@ router.get("/", async (req, res) => {
 });
 
 // Exemple de route pour ajouter un produit
-router.post("/", async (req, res) => {
+router.post("/",isAuthenticated,isAdmin, async (req, res) => {
   try {
     const { name, price, categoryId } = req.body;
     const prod = await ProductService.createProduct(name, price, categoryId);
@@ -31,7 +32,7 @@ router.post("/", async (req, res) => {
   }
 });
 //route pour afficher le formulaire pour modifier un produit 
-router.get('/edit/:id', async (req,res) => {
+router.get('/edit/:id',isAuthenticated, isAdmin, async (req,res) => {
   const { id } = req.params;
   try {
     //recupere le produit a modifier
@@ -45,7 +46,7 @@ router.get('/edit/:id', async (req,res) => {
 });
 
 //route pour modifier un produit
-router.put('/:id', async (req, res)=>{
+router.put('/:id',isAuthenticated,isAdmin,async (req, res)=>{
   const { id } = req.params;
   const {name, price ,categoryId } = req.body;
   try {
@@ -59,7 +60,7 @@ router.put('/:id', async (req, res)=>{
 })
 
 // Route DELETE pour supprimer un produit
-router.delete("/:id", async (req, res) => {
+router.delete("/:id",isAuthenticated,isAdmin, async (req, res) => {
   const { id } = req.params;
   try {
     await ProductService.deleteProduct(id);

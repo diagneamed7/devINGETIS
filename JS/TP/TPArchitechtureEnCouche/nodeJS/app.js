@@ -5,7 +5,7 @@ const methodOverride = require('method-override');
 const helmet = require('helmet');
 const csrf = require('csurf');
 const cookieParser = require('cookie-parser');
-
+const session = require('express-session');
 const productRoutes = require('./routes/productRoutes');
 const categoryRoutes = require('./routes/categoryRoutes');
 const authRoutes = require('./routes/auth');
@@ -22,15 +22,22 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(helmet());
 app.use(cookieParser());
 app.use(csrf({ cookie: true })); // Protection CSRF
-
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,  // Change ce secret pour un environnement de production
+    resave: false,
+    saveUninitialized: false,
+    cookie: { secure: false } // En production, utilise `secure: true` avec HTTPS
+  }));
 // Middleware global pour CSRF
 app.use((req, res, next) => {
-    res.locals.csrfToken = req.csrfToken(); // pour Ajouter du token CSRF aux vues
-    next();
+  res.locals.csrfToken = req.csrfToken(); // pour Ajouter du token CSRF aux vues
+  next();
 });
+
 //Pour afficher la vue dés le lancement du projet 
 app.get('/', (req, res) => {
-    res.render('Acceuil');
+  res.render('Acceuil');
 });
 //Pour fixer un admin de base 
 const bcrypt = require('bcrypt');
@@ -61,9 +68,9 @@ const User = require('./entities/User');
 })();
 */
 // Routes
+app.use('/auth', authRoutes);
 app.use('/products', productRoutes);
 app.use('/categories', categoryRoutes);
-app.use('/auth', authRoutes);
 
 // Démarrage du serveur
 app.listen(3000, () => console.log(`Server running on http://localhost:3000`));
