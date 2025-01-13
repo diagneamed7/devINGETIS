@@ -1,0 +1,15 @@
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TP2/Plloy/obj/Debug/net9.0/Plloy.GeneratedMSBuildEditorConfig.editorconfig
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TP2/Plloy/obj/Debug/net9.0/Plloy.AssemblyInfoInputs.cache
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TP2/Plloy/obj/Debug/net9.0/Plloy.AssemblyInfo.cs
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TP2/Plloy/obj/Debug/net9.0/Plloy.csproj.CoreCompileInputs.cache
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TP2/Plloy/obj/Debug/net9.0/Plloy.sourcelink.json
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TP2/Plloy/bin/Debug/net9.0/Plloy
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TP2/Plloy/bin/Debug/net9.0/Plloy.deps.json
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TP2/Plloy/bin/Debug/net9.0/Plloy.runtimeconfig.json
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TP2/Plloy/bin/Debug/net9.0/Plloy.dll
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TP2/Plloy/bin/Debug/net9.0/Plloy.pdb
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TP2/Plloy/obj/Debug/net9.0/Plloy.dll
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TP2/Plloy/obj/Debug/net9.0/refint/Plloy.dll
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TP2/Plloy/obj/Debug/net9.0/Plloy.pdb
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TP2/Plloy/obj/Debug/net9.0/Plloy.genruntimeconfig.cache
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TP2/Plloy/obj/Debug/net9.0/ref/Plloy.dll

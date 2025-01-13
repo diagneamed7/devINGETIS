@@ -24,10 +24,10 @@ app.use(cookieParser());
 app.use(csrf({ cookie: true })); // Protection CSRF
 app.use(
   session({
-    secret: process.env.SESSION_SECRET,  // Change ce secret pour un environnement de production
+    secret: process.env.SESSION_SECRET, 
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: false } // En production, utilise `secure: true` avec HTTPS
+    cookie: { secure: false } 
   }));
 // Middleware global pour CSRF
 app.use((req, res, next) => {
@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
 //Pour fixer un admin de base 
 const bcrypt = require('bcrypt');
 const User = require('./entities/User');
-/*
+
 (async () => {
   try {
     await User.sync(); // Synchroniser le modèle avec la base de données
@@ -66,7 +66,7 @@ const User = require('./entities/User');
     console.error('Error creating admin user:', err);
   }
 })();
-*/
+
 // Routes
 app.use('/auth', authRoutes);
 app.use('/products', productRoutes);

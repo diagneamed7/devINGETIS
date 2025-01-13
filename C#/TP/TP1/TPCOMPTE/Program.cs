@@ -26,7 +26,7 @@ class Program
          Console.WriteLine("Entrer un motant pour le solde du compte");
          float solde = float.Parse(Console.ReadLine());
          List<Mouvement> mouvements = new List<Mouvement>();
-        Compte compte = new Compte(solde,mouvements);
+        //Compte compte = new Compte(solde,mouvements);
         // //Afficher le solde compte
         // Console.WriteLine($"Compte créé avec un solde initial de : {compte.Solde} €");
 
