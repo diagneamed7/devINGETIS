@@ -1,0 +1,15 @@
+/Users/utilisateur/Projects/EMPLOYE/EMPLOYE/bin/Debug/net7.0/EMPLOYE
+/Users/utilisateur/Projects/EMPLOYE/EMPLOYE/bin/Debug/net7.0/EMPLOYE.deps.json
+/Users/utilisateur/Projects/EMPLOYE/EMPLOYE/bin/Debug/net7.0/EMPLOYE.runtimeconfig.json
+/Users/utilisateur/Projects/EMPLOYE/EMPLOYE/bin/Debug/net7.0/EMPLOYE.dll
+/Users/utilisateur/Projects/EMPLOYE/EMPLOYE/bin/Debug/net7.0/EMPLOYE.pdb
+/Users/utilisateur/Projects/EMPLOYE/EMPLOYE/obj/Debug/net7.0/EMPLOYE.csproj.AssemblyReference.cache
+/Users/utilisateur/Projects/EMPLOYE/EMPLOYE/obj/Debug/net7.0/EMPLOYE.GeneratedMSBuildEditorConfig.editorconfig
+/Users/utilisateur/Projects/EMPLOYE/EMPLOYE/obj/Debug/net7.0/EMPLOYE.AssemblyInfoInputs.cache
+/Users/utilisateur/Projects/EMPLOYE/EMPLOYE/obj/Debug/net7.0/EMPLOYE.AssemblyInfo.cs
+/Users/utilisateur/Projects/EMPLOYE/EMPLOYE/obj/Debug/net7.0/EMPLOYE.csproj.CoreCompileInputs.cache
+/Users/utilisateur/Projects/EMPLOYE/EMPLOYE/obj/Debug/net7.0/EMPLOYE.dll
+/Users/utilisateur/Projects/EMPLOYE/EMPLOYE/obj/Debug/net7.0/refint/EMPLOYE.dll
+/Users/utilisateur/Projects/EMPLOYE/EMPLOYE/obj/Debug/net7.0/EMPLOYE.pdb
+/Users/utilisateur/Projects/EMPLOYE/EMPLOYE/obj/Debug/net7.0/EMPLOYE.genruntimeconfig.cache
+/Users/utilisateur/Projects/EMPLOYE/EMPLOYE/obj/Debug/net7.0/ref/EMPLOYE.dll

@@ -1,0 +1,15 @@
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/ProgramC/bin/Debug/net7.0/ProgramC
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/ProgramC/bin/Debug/net7.0/ProgramC.deps.json
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/ProgramC/bin/Debug/net7.0/ProgramC.runtimeconfig.json
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/ProgramC/bin/Debug/net7.0/ProgramC.dll
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/ProgramC/bin/Debug/net7.0/ProgramC.pdb
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/ProgramC/obj/Debug/net7.0/ProgramC.csproj.AssemblyReference.cache
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/ProgramC/obj/Debug/net7.0/ProgramC.GeneratedMSBuildEditorConfig.editorconfig
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/ProgramC/obj/Debug/net7.0/ProgramC.AssemblyInfoInputs.cache
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/ProgramC/obj/Debug/net7.0/ProgramC.AssemblyInfo.cs
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/ProgramC/obj/Debug/net7.0/ProgramC.csproj.CoreCompileInputs.cache
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/ProgramC/obj/Debug/net7.0/ProgramC.dll
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/ProgramC/obj/Debug/net7.0/refint/ProgramC.dll
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/ProgramC/obj/Debug/net7.0/ProgramC.pdb
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/ProgramC/obj/Debug/net7.0/ProgramC.genruntimeconfig.cache
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/ProgramC/obj/Debug/net7.0/ref/ProgramC.dll

@@ -1,0 +1,15 @@
+/Users/utilisateur/Projects/TPCOMPTE1/TPCOMPTE1/bin/Debug/net7.0/TPCOMPTE1
+/Users/utilisateur/Projects/TPCOMPTE1/TPCOMPTE1/bin/Debug/net7.0/TPCOMPTE1.deps.json
+/Users/utilisateur/Projects/TPCOMPTE1/TPCOMPTE1/bin/Debug/net7.0/TPCOMPTE1.runtimeconfig.json
+/Users/utilisateur/Projects/TPCOMPTE1/TPCOMPTE1/bin/Debug/net7.0/TPCOMPTE1.dll
+/Users/utilisateur/Projects/TPCOMPTE1/TPCOMPTE1/bin/Debug/net7.0/TPCOMPTE1.pdb
+/Users/utilisateur/Projects/TPCOMPTE1/TPCOMPTE1/obj/Debug/net7.0/TPCOMPTE1.csproj.AssemblyReference.cache
+/Users/utilisateur/Projects/TPCOMPTE1/TPCOMPTE1/obj/Debug/net7.0/TPCOMPTE1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/utilisateur/Projects/TPCOMPTE1/TPCOMPTE1/obj/Debug/net7.0/TPCOMPTE1.AssemblyInfoInputs.cache
+/Users/utilisateur/Projects/TPCOMPTE1/TPCOMPTE1/obj/Debug/net7.0/TPCOMPTE1.AssemblyInfo.cs
+/Users/utilisateur/Projects/TPCOMPTE1/TPCOMPTE1/obj/Debug/net7.0/TPCOMPTE1.csproj.CoreCompileInputs.cache
+/Users/utilisateur/Projects/TPCOMPTE1/TPCOMPTE1/obj/Debug/net7.0/TPCOMPTE1.dll
+/Users/utilisateur/Projects/TPCOMPTE1/TPCOMPTE1/obj/Debug/net7.0/refint/TPCOMPTE1.dll
+/Users/utilisateur/Projects/TPCOMPTE1/TPCOMPTE1/obj/Debug/net7.0/TPCOMPTE1.pdb
+/Users/utilisateur/Projects/TPCOMPTE1/TPCOMPTE1/obj/Debug/net7.0/TPCOMPTE1.genruntimeconfig.cache
+/Users/utilisateur/Projects/TPCOMPTE1/TPCOMPTE1/obj/Debug/net7.0/ref/TPCOMPTE1.dll
