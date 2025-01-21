@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{D009AFD4-AAAC-4FB0-874F-1FCDE39CF6DC}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Calculatrice/Program.cs">
+    <Files>
+      <File FileName="Calculatrice/Program.cs" Line="9" Column="48" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Calculatrice" expanded="True">
+            <Node name="Calculatrice" expanded="True">
+              <Node name="Dependencies" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Calculatrice PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
