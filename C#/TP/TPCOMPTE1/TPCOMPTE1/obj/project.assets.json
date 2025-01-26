@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/utilisateur/Projects/TPCOMPTE1/TPCOMPTE1/TPCOMPTE1.csproj",
+      "projectUniqueName": "/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TPCOMPTE1/TPCOMPTE1/TPCOMPTE1.csproj",
       "projectName": "TPCOMPTE1",
-      "projectPath": "/Users/utilisateur/Projects/TPCOMPTE1/TPCOMPTE1/TPCOMPTE1.csproj",
+      "projectPath": "/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TPCOMPTE1/TPCOMPTE1/TPCOMPTE1.csproj",
       "packagesPath": "/Users/utilisateur/.nuget/packages/",
-      "outputPath": "/Users/utilisateur/Projects/TPCOMPTE1/TPCOMPTE1/obj/",
+      "outputPath": "/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TPCOMPTE1/TPCOMPTE1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/utilisateur/.nuget/NuGet/NuGet.Config"

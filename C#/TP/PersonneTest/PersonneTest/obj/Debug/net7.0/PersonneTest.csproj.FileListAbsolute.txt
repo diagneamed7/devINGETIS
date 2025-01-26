@@ -1,0 +1,15 @@
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/PersonneTest/PersonneTest/bin/Debug/net7.0/PersonneTest
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/PersonneTest/PersonneTest/bin/Debug/net7.0/PersonneTest.deps.json
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/PersonneTest/PersonneTest/bin/Debug/net7.0/PersonneTest.runtimeconfig.json
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/PersonneTest/PersonneTest/bin/Debug/net7.0/PersonneTest.dll
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/PersonneTest/PersonneTest/bin/Debug/net7.0/PersonneTest.pdb
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/PersonneTest/PersonneTest/obj/Debug/net7.0/PersonneTest.csproj.AssemblyReference.cache
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/PersonneTest/PersonneTest/obj/Debug/net7.0/PersonneTest.GeneratedMSBuildEditorConfig.editorconfig
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/PersonneTest/PersonneTest/obj/Debug/net7.0/PersonneTest.AssemblyInfoInputs.cache
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/PersonneTest/PersonneTest/obj/Debug/net7.0/PersonneTest.AssemblyInfo.cs
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/PersonneTest/PersonneTest/obj/Debug/net7.0/PersonneTest.csproj.CoreCompileInputs.cache
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/PersonneTest/PersonneTest/obj/Debug/net7.0/PersonneTest.dll
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/PersonneTest/PersonneTest/obj/Debug/net7.0/refint/PersonneTest.dll
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/PersonneTest/PersonneTest/obj/Debug/net7.0/PersonneTest.pdb
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/PersonneTest/PersonneTest/obj/Debug/net7.0/PersonneTest.genruntimeconfig.cache
+/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/PersonneTest/PersonneTest/obj/Debug/net7.0/ref/PersonneTest.dll

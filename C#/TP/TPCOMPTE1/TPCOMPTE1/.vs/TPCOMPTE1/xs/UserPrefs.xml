@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{767FDEE8-526B-44D7-8098-E7CBBACC4A43}|Default">
+  <MonoDevelop.Ide.ItemProperties.TPCOMPTE1 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
+    <Files>
+      <File FileName="Program.cs" Line="34" Column="1" />
+      <File FileName="Entity/Mouvement.cs" Line="1" Column="1" />
+      <File FileName="Entity/CompteEpargne.cs" Line="28" Column="14" />
+      <File FileName="Entity/Compte.cs" Line="14" Column="27" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TPCOMPTE1">
+            <Node name="TPCOMPTE1">
+              <Node name="Entity" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

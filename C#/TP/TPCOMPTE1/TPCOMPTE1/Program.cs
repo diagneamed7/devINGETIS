@@ -25,6 +25,25 @@ namespace TPCOMPTE1
 
             // Afficher le solde final
             Console.WriteLine($"\nSolde final : {compte.Solde}");
+
+            //Création compte épargne
+            CompteEpargne Ce = new CompteEpargne(12, 34500, 0);
+
+            Console.WriteLine($"Numéro du compte : {Ce.NumCompte}");
+            Console.WriteLine($"Solde initial : {Ce.Solde} €");
+
+            // Effectuer un dépôt
+            Ce.Crediter(500.0f);
+            Console.WriteLine($"Solde après dépôt : {Ce.Solde} €");
+
+            // Calculer les intérêts
+            Ce.calculIntCourant();
+            Console.WriteLine($"Montant des intérêts : {Ce.MontInt} €");
+
+            // Retirer un montant
+            Ce.Debiter(700.0f);
+            Console.WriteLine($"Solde après retrait : {Ce.Solde} €");
+
         }
   
         

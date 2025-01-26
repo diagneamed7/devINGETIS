@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TPCOMPTE/TPCOMPTE.csproj",
-      "projectName": "TPCOMPTE",
-      "projectPath": "/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TPCOMPTE/TPCOMPTE.csproj",
+      "projectUniqueName": "/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TPCOMPTE/PersonePOOTEST.csproj",
+      "projectName": "PersonePOOTEST",
+      "projectPath": "/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TPCOMPTE/PersonePOOTEST.csproj",
       "packagesPath": "/Users/utilisateur/.nuget/packages/",
       "outputPath": "/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/TPCOMPTE/obj/",
       "projectStyle": "PackageReference",
