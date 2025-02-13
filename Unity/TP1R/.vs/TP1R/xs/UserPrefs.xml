@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{1E8ED8EC-9A27-8838-6DF5-F8B10A7FC6BA}|">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Rotator.cs">
+    <Files>
+      <File FileName="Assets/Script/PlayerController.cs" />
+      <File FileName="Assets/Script/CameraController.cs" Line="18" Column="65" />
+      <File FileName="Assets/Script/Rotator.cs" Line="10" Column="8" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TP1R" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Script" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="052872c8-028a-4f28-a689-45696f9807dd" />
+</Properties>

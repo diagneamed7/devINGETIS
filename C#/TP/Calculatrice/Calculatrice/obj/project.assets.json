@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/utilisateur/Projects/Calculatrice/Calculatrice/Calculatrice.csproj",
+      "projectUniqueName": "/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/Calculatrice/Calculatrice/Calculatrice.csproj",
       "projectName": "Calculatrice",
-      "projectPath": "/Users/utilisateur/Projects/Calculatrice/Calculatrice/Calculatrice.csproj",
+      "projectPath": "/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/Calculatrice/Calculatrice/Calculatrice.csproj",
       "packagesPath": "/Users/utilisateur/.nuget/packages/",
-      "outputPath": "/Users/utilisateur/Projects/Calculatrice/Calculatrice/obj/",
+      "outputPath": "/Users/utilisateur/Desktop/INGETIS/DevWEB/C#/TP/Calculatrice/Calculatrice/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/utilisateur/.nuget/NuGet/NuGet.Config"
@@ -39,7 +39,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net7.0": {
@@ -60,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.317/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.101/RuntimeIdentifierGraph.json"
       }
     }
   }
