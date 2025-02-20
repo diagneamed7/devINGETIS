@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 import java.util.List;
 
+import com.example.demo.entities.Categorie;
 import com.example.demo.entities.Produit;
 
 public interface ProduitService {
@@ -17,4 +18,17 @@ public interface ProduitService {
 
     List<Produit> getAllProduits();
 
+    List<Produit> findByNomProduit(String nom);
+
+    List<Produit> findByNomProduitContains(String nom);
+
+    List<Produit> findByNomPrix(String nom, Double prix);
+
+    List<Produit> findByCategorie(Categorie categorie);
+
+    List<Produit> findByCategorieIdCat(Long id);
+
+    List<Produit> findByOrderByNomProduitAsc();
+
+    List<Produit> trierProduitsNomsPrix();
 }

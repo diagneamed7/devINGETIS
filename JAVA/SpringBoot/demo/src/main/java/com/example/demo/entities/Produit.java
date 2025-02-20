@@ -6,6 +6,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Produit {
@@ -33,30 +34,24 @@ public class Produit {
     }
 
     public void setIdProduit(Long idProduit) {
-        this.idProduit = idProduit;}
-
-    
+        this.idProduit = idProduit;
+    }
 
     public String getNomProduit() {
-        return nomProduit;}
-
-
+        return nomProduit;
+    }
 
     public void setNomProduit(String nomProduit) {
-        this.nomProduit = nomProduit;}
-
-    
+        this.nomProduit = nomProduit;
+    }
 
     public Double getPrixProduit() {
-        return prixProduit;}
+        return prixProduit;
+    }
 
-
-
-    public void setPrixProduit(Double prixProduit)
-     {
-        this.prixProduit = prixProduit;}
-
-    
+    public void setPrixProduit(Double prixProduit) {
+        this.prixProduit = prixProduit;
+    }
 
     public Date getDateCreation() {
         return dateCreation;
@@ -73,4 +68,16 @@ public class Produit {
                 + nomProduit + ", prixProduit=" + prixProduit
                 + ", dateCreation=" + dateCreation + "]";
     }
+
+    @ManyToOne
+    private Categorie categorie;
+
+    public Categorie getCategorie() {
+        return categorie;
+    }
+
+    public void setCategorie(Categorie categorie) {
+        this.categorie = categorie;
+    }
+
 }
