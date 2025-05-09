@@ -46,7 +46,7 @@ public class ProduitServiceImpl implements ProduitService {
 
     @Override
     public List<Produit> findByNomProduit(String nom) {
-        return produitRepository.findByNomProduits(nom);
+        return produitRepository.findByNomProduit(nom);
     }
 
     @Override
@@ -56,7 +56,7 @@ public class ProduitServiceImpl implements ProduitService {
 
     @Override
     public List<Produit> findByNomPrix(String nom, Double prix) {
-        return produitRepository.findByNomPrix(nom, prix);
+        return produitRepository.findByNomProduitAndPrixProduit(nom, prix);
     }
 
     @Override

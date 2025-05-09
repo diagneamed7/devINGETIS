@@ -31,4 +31,8 @@ public interface ProduitService {
     List<Produit> findByOrderByNomProduitAsc();
 
     List<Produit> trierProduitsNomsPrix();
+
+    ProduitDTO convertEntityToDto (Produit produit);
+    Produit convertDtoToEntity(ProduitDTO produitDto)
+
 }

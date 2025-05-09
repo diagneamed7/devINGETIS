@@ -54,7 +54,7 @@ class DemoApplicationTests {
 
     @Test
     public void testFindByNomProduit() {
-        List<Produit> prods = produitRepository.findByNomProduits("iphone X");
+        List<Produit> prods = produitRepository.findByNomProduit("iphone X");
         for (Produit p : prods) {
             System.out.println(p);
         }
@@ -70,7 +70,7 @@ class DemoApplicationTests {
 
     @Test
     public void testfindByNomPrix() {
-        List<Produit> prods = produitRepository.findByNomPrix("iphone X", 1000.0);
+        List<Produit> prods = produitRepository.findByNomProduitAndPrixProduit("iphone X", 1000.0);
         for (Produit p : prods) {
             System.out.println(p);
         }
@@ -80,7 +80,7 @@ class DemoApplicationTests {
     @Test
     public void testfindByCategorie() {
         Categorie cat = new Categorie();
-        cat.setIdCat(2L);
+        cat.setIdCat(1L);
         List<Produit> prods = produitRepository.findByCategorie(cat);
         for (Produit p : prods) {
             System.out.println(p);
