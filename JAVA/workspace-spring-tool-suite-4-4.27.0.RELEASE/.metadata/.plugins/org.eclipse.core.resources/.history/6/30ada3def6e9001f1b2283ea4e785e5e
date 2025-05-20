@@ -1,0 +1,77 @@
+package Vue;
+import java.util.*;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		 Stream<String> stream;
+
+	        Map<String, List<String>> map;
+
+	        Map<String, Long> map2;
+
+	        HashSet acteursdbl;
+	        
+	        Stream<String> Stacteur;
+
+	        try {
+	            stream = Files.lines(Paths.get("/Users/utilisateur/Documents/workspace-spring-tool-suite-4-4.27.0.RELEASE/TPSTREAMJAVA/bin/Entity/films.txt"));
+
+	            map = stream.map(t -> t.split(";")).collect(Collectors.toMap(t -> t[0], l -> Arrays.asList(l).subList(1, l.length)));
+
+	            //parcours de la HashMap
+
+	           for (Map.Entry<String, List<String>> entry : map.entrySet()) {
+
+	               System.out.println("Key : " + entry.getKey() + " - values : " + entry.getValue());
+
+	            }
+	        // Création du Stream contenant tous les acteurs
+	           Stacteur = map.values().stream()
+	               .flatMap(List::stream) // Aplatis les listes pour obtenir un Stream<String>
+	               .distinct(); // Supprime les doublons
+	           
+	           System.out.println("Les 50 premiers acteurs :");
+	           Stacteur.limit(50).forEach(System.out::println);
+	            
+	           //nombredacteurTotal
+	           long nombreTotalActeurs = map.values().stream()
+	           .flatMap(List::stream)
+	           .distinct()
+	           .count();
+	           
+	           System.out.println("Nombre total d'acteurs uniques : " + nombreTotalActeurs);
+	           
+	           //Question6
+	           nombreTotalActeurs = map.values().stream()
+	    	           .flatMap(List::stream)
+	    	           .count();
+	    	           
+	    	           System.out.println("Nombre total d'acteurs total : " + nombreTotalActeurs);
+	    	           
+	    	           //regrouper les acteur et compter leurs apparitions
+	    	           Map<String, Long> acteurCount = Stacteur.collect(Collectors.groupingBy(actor->actor, Collectors.counting()));
+	    	           //afficher acteur et son nombre son film
+	           
+	           
+	        } catch (IOException e) {
+	            // TODO Auto-generated catch block
+	            e.printStackTrace();
+	        }
+
+	    }
+
+	}
+
+
