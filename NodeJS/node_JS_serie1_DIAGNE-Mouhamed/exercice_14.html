@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items:start;
+        min-height: 100vh;
+        margin: 0;
+    }
+    form {
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background: #f9f9f9;
+    }
+    button{
+        margin-left: 25px;
+    }
+</style>
+</head>
+<body>
+    <form >
+        <label for="dimension tableau">Dimension tableau</label>
+        <input type="number" id="dimension" name="dimension" min="1" required><br>
+        <label for ="valeur minimale">Valeur minimale</label>
+        <input type="number" id="valeur_minimale" name="valeur_minimale" required><br>
+        <label for ="valeur maximale">Valeur maximale</label>
+        <input type="number" id="valeur_maximale" name="valeur_maximale" required><br>
+        <button type="submit" id="btn">Générer tableau</button><br>
+    </form>
+    <br>
+    <div id="resultat" style="margin-top: 20px;"></div>
+    <script src="exercice_14.js"></script>
+</body>
+</html>

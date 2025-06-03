@@ -1,0 +1,17 @@
+<div>
+    <h1>TodoList</h1>
+
+    <ul>
+        @for(todo of todos; track todo.title ){
+            <app-todo-item 
+            [todoItem]="todo"
+             (completeStatusChange)="onTodocompleted($event)">
+            </app-todo-item>
+            
+           
+            
+
+        }
+    </ul>
+    
+</div>
