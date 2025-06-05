@@ -1,0 +1,16 @@
+{
+  "name": "node_ligue1_api",
+  "version": "1.0.0",
+  "description": "API_Gestion_Foot",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Mouhamed_DIAGNE",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}

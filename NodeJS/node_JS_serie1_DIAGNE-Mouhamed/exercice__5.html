@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Table de multiplication</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+      width: 40px;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    caption {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <table id="multiplicationTable">
+    <caption>Table de multiplication</caption>
+  </table>
+
+  <script>
+    const table = document.getElementById("multiplicationTable");
+
+    for (let i = 0; i <= 9; i++) {
+      const row = table.insertRow();
+
+      for (let j = 0; j <= 9; j++) {
+        const cell = (i === 0 || j === 0) ? document.createElement("th") : row.insertCell();
+
+        if (i === 0 && j === 0) {
+          cell.textContent = "x";
+        } else if (i === 0) {
+          cell.textContent = j;
+        } else if (j === 0) {
+          cell.textContent = i;
+        } else {
+          cell.textContent = i * j;
+        }
+
+        if (i === 0 || j === 0) {
+          row.appendChild(cell);
+        }
+      }
+    }
+  </script>
+</body>
+</html>

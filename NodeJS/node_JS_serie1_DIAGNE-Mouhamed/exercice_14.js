@@ -10,7 +10,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
         return;
     }
 
-    // Génération du tableau de nombres aléatoires
+    // Génération du tableau davec des  nombres aléatoires
     let tableau = [];
     for (let i = 0; i < dimension; i++) {
         let nombre = Math.floor(Math.random() * (max - min + 1)) + min;
