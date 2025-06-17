@@ -1,0 +1,223 @@
+<!--    ===============================================  
+        Gestion des Etudiants : version 1
+                - Liste des étudiants
+        ===============================================    
+-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Étudiants</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Gris clair */
+            color: #374151; /* Gris foncé */
+        }
+        .container {
+            max-width: 960px; /* Largeur maximale pour le contenu */
+        }
+        /* Styles personnalisés pour le tableau */
+        .table-container {
+            overflow-x: auto; /* Permet le défilement horizontal pour les petits écrans */
+        }
+        table {
+            width: 100%;
+            border-collapse: separate; /* Pour les coins arrondis sur le tableau */
+            border-spacing: 0;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* Bordure inférieure légère */
+        }
+        th {
+            background-color: #eef2ff; /* Couleur de fond pour l'en-tête */
+            font-weight: 600;
+            color: #4338ca; /* Bleu foncé */
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+        tr:nth-child(even) {
+            background-color: #f9fafb; /* Lignes paires légèrement différentes */
+        }
+        tr:hover {
+            background-color: #e0f2fe; /* Effet de survol */
+            transition: background-color 0.2s ease-in-out;
+        }
+        /* Coins arrondis pour le tableau */
+        table th:first-child { border-top-left-radius: 8px; }
+        table th:last-child { border-top-right-radius: 8px; }
+        table tr:last-child td:first-child { border-bottom-left-radius: 8px; }
+        table tr:last-child td:last-child { border-bottom-right-radius: 8px; }
+        /* Style pour les champs de formulaire en consultation */
+        .form-field-display {
+            background-color: #e2e8f0; /* bg-gray-200 */
+            color: #4a5568; /* text-gray-700 */
+            padding: 0.75rem; /* p-3 */
+            border-radius: 0.5rem; /* rounded-lg */
+            border: 1px solid #cbd5e0; /* border-gray-300 */
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="p-6">
+    <div class="container mx-auto bg-white p-8 rounded-lg shadow-xl">
+        <h1 class="text-4xl font-bold text-center mb-10 text-indigo-800">Gestion des Étudiants</h1>
+
+
+        <div class="flex flex-wrap justify-center gap-4 mb-10">
+            <button id="btnListe" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                Liste
+            </button>
+            <button id="btnChercher" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                Chercher
+            </button>
+            <button id="btnModifier" class="bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                Modifier
+            </button>
+            <button id="btnSupprimer" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                Supprimer
+            </button>
+        </div>
+
+
+        <div id="resultDisplay" class="mt-8 p-6 bg-gray-50 rounded-lg border border-gray-200">
+            <p class="text-gray-600 text-center">Cliquez sur un bouton pour interagir avec l'API.</p>
+        </div>
+    </div>
+
+
+    <script>
+        //      ==================================================
+        //      Préparer l'interception d'événements sur les boutons :
+        //      un événement sur un bouton : clic, survol, ....
+        //      ==================================================
+        document.addEventListener('DOMContentLoaded', () => {
+            const btnListe = document.getElementById('btnListe');
+            const btnChercher = document.getElementById('btnChercher');
+            const btnModifier = document.getElementById('btnModifier');
+            const btnSupprimer = document.getElementById('btnSupprimer');
+            const resultDisplay = document.getElementById('resultDisplay');
+        //      ==================================================
+        //      Fonction pour afficher un message temporaire
+        //      ==================================================
+        function showTemporaryMessage(message, type = 'info') {
+                let bgColor = 'bg-blue-100';
+                let textColor = 'text-blue-800';
+                if (type === 'error') {
+                    bgColor = 'bg-red-100';
+                    textColor = 'text-red-800';
+                } else if (type === 'success') {
+                    bgColor = 'bg-green-100';
+                    textColor = 'text-green-800';
+                } else if (type === 'warning') {
+                    bgColor = 'bg-yellow-100';
+                    textColor = 'text-yellow-800';
+                }
+
+
+                resultDisplay.innerHTML = `
+                    <div class="${bgColor} ${textColor} p-4 rounded-md text-center font-medium">
+                        ${message}
+                    </div>
+                `;
+            }   // fin fonction
+            //      ===================================================
+            //      Gérer l'événement clic sur le bouton Liste
+            //      ===================================================
+            btnListe.addEventListener('click', async () => {
+                showTemporaryMessage('Chargement de la liste des étudiants...', 'info');
+                try {
+                    /// appel du Endpoint de l'API :
+                    const response = await fetch('http://localhost:3000/api/etudiants');
+                    //  teste de la réponse de l'API    
+                    if (!response.ok) {
+                        const errorData = await response.json().catch(() => ({ message: 'Erreur inconnue' }));
+                        throw new Error(`Erreur HTTP: ${response.status} - ${errorData.message || 'Problème de serveur'}`);
+                    }
+                    //  récupérer la liste des étudiants dans une collection (tableau)
+                    const etudiants = await response.json();
+                    //  si aucun étudiant trouvé :    
+                    if (etudiants.length === 0) {
+                        resultDisplay.innerHTML = `
+                            <div class="bg-yellow-100 text-yellow-800 p-4 rounded-md text-center font-medium">
+                                Aucune donnée d'étudiant trouvée.
+                            </div>
+                        `;
+                        return;
+                    }
+                    // je prépare un tableau HTML pour l'affichage :
+                    let tableHtml = `
+                        <div class="table-container rounded-lg shadow-inner">
+                            <table class="min-w-full bg-white rounded-lg">
+                                <thead class="rounded-t-lg">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Prénom</th>
+                                        <th>Nom</th>
+                                        <th>Genre</th> <!-- Champ modifié -->
+                                        <th>Ville</th> <!-- Champ modifié -->
+                                        <th>Pays</th> <!-- Champ modifié -->
+                                        <th>Créé le</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                    `;
+                    // je boucle sur la collection des étudiants et commence
+                    // à préparer l'affichage HTML :
+                    etudiants.forEach(etudiant => {
+                        // je formatte la date de création de l'étudiant, reçe de la BD,
+                        //  en format date adaptée au pays de l'affichage ;
+                        const createdDate = etudiant.createdAt ? new Date(etudiant.createdAt).toLocaleDateString('fr-FR') : 'N/A';
+                        tableHtml += `
+                            <tr>
+                                <td>${etudiant.id}</td>
+                                <td>${etudiant.firstname || 'N/A'}</td>
+                                <td>${etudiant.lastname || 'N/A'}</td>
+                                <td>${etudiant.gender || 'N/A'}</td> <!-- Champ modifié -->
+                                <td>${etudiant.city || 'N/A'}</td>    <!-- Champ modifié -->
+                                <td>${etudiant.country || 'N/A'}</td>  <!-- Champ modifié -->
+                                <td>${createdDate}</td>
+                            </tr>
+                        `;
+                    });
+                    tableHtml += `
+                                </tbody>
+                            </table>
+                        </div>
+                    `;
+                    // j'affiche le tableau HTML :
+                    resultDisplay.innerHTML = tableHtml;
+
+
+                } catch (error) {
+                    //  problème d'accès à l'API :
+                    console.error("Erreur lors de la récupération des étudiants :", error);
+                    resultDisplay.innerHTML = `
+                        <div class="bg-red-100 text-red-800 p-4 rounded-md text-center font-medium">
+                            Erreur lors de la récupération des étudiants : ${error.message}. <br> Vérifiez que votre API Node.js est bien en cours d'exécution sur <code class="font-mono">http://localhost:3000</code>.
+                        </div>
+                    `;
+                }
+            });
+            // Gestionnaire pour le bouton "Chercher"
+           
+
+
+            // Gestionnaire pour le bouton "Modifier"
+           
+
+
+            // Gestionnaire pour le bouton "Supprimer"
+           
+     });
+       
+    </script>
+</body>
+</html>
+node_etudiants_api_3emeAnnee_3_Web_JS
